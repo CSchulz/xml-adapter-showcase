@@ -18,7 +18,7 @@ public class PackageResource {
                              @PathParam("packageNumber") PackageNumber number) {
 
         Package pkg = new Package();
-        pkg.assignPackageNumber(new PackageNumber("1234"));
+        pkg.assignPackageNumber(number);
 
         return Response.ok().entity(pkg).build();
     }

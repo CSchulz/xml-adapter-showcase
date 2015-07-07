@@ -18,6 +18,11 @@ public class PackageNumber extends AbstractValueObject<Integer> {
 
     }
 
+    public PackageNumber(String value) {
+        super(Integer.valueOf(value));
+
+    }
+
     public static class Adapter extends XmlAdapter<Integer, PackageNumber> {
         @Override
         public PackageNumber unmarshal(Integer v) throws Exception {
